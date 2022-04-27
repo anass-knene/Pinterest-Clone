@@ -26,25 +26,25 @@ function Nav() {
         <li>
           <Link to="/myPic">My Pics</Link>
         </li>
-        <li onClick={addPicture} className="addPicDiv">
-          Add a Pic
-          <span className="ms-1">
-            <IoMdArrowDropdown />
+        <li className="addPicDiv">
+          <span className="ms-1" onClick={addPicture}>
+            Add a Pic
+            <IoMdArrowDropdown className="ms-1" />
           </span>
+          {showDiv ? (
+            <div className="dropdownDiv">
+              <input type="input" name="picUrl" placeholder="Pic url..." />
+              <input
+                type="text"
+                name="picDescription"
+                placeholder="Pic description"
+              />
+            </div>
+          ) : (
+            <></>
+          )}
         </li>
       </ul>
-      {showDiv ? (
-        <div className="dropdownDiv">
-          <input type="input" name="picUrl" placeholder="Pic url..." />
-          <input
-            type="text"
-            name="picDescription"
-            placeholder="Pic description"
-          />
-        </div>
-      ) : (
-        <></>
-      )}
       <div className="logBtn">
         <button type="button" className="Logout ps-2 pe-2">
           <AiFillGithub size="25" /> <span className="ms-1"> Login</span>
