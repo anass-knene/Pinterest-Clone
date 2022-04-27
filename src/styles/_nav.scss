@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.Nav {
+  background-color: rgba(191, 189, 189, 0.584);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+
+  ul {
+    display: flex;
+    height: 100%;
+
+    li {
+      margin-left: 20px;
+      font-size: larger;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: gray;
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+      .addPicDiv {
+        position: relative;
+      }
+      a {
+        color: gray;
+        text-decoration: none;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  .Logout {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.132);
+    }
+  }
+}
+.dropdownDiv {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  position: absolute;
+}
